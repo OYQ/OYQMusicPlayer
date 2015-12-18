@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		359D7FFD1C247D5B00374E49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D7FF21C247D5B00374E49 /* AppDelegate.m */; };
+		359D7FFE1C247D5B00374E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF31C247D5B00374E49 /* Assets.xcassets */; };
+		359D7FFF1C247D5B00374E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF41C247D5B00374E49 /* LaunchScreen.storyboard */; };
+		359D80001C247D5B00374E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF61C247D5B00374E49 /* Main.storyboard */; };
+		359D80011C247D5B00374E49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF81C247D5B00374E49 /* Info.plist */; };
+		359D80021C247D5B00374E49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D7FF91C247D5B00374E49 /* main.m */; };
+		359D80031C247D5B00374E49 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FFA1C247D5B00374E49 /* music.mp3 */; };
+		359D80041C247D5B00374E49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D7FFC1C247D5B00374E49 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		359D7FD21C245E8300374E49 /* OYQMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OYQMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		359D7FF11C247D5B00374E49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		359D7FF21C247D5B00374E49 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		359D7FF31C247D5B00374E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		359D7FF51C247D5B00374E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		359D7FF71C247D5B00374E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		359D7FF81C247D5B00374E49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		359D7FF91C247D5B00374E49 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		359D7FFA1C247D5B00374E49 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		359D7FFB1C247D5B00374E49 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		359D7FFC1C247D5B00374E49 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		359D7FCF1C245E8300374E49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		359D7FC91C245E8300374E49 = {
+			isa = PBXGroup;
+			children = (
+				359D7FF01C247D5B00374E49 /* OYQMusicPlayer */,
+				359D7FD31C245E8300374E49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		359D7FD31C245E8300374E49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				359D7FD21C245E8300374E49 /* OYQMusicPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		359D7FF01C247D5B00374E49 /* OYQMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				359D7FF11C247D5B00374E49 /* AppDelegate.h */,
+				359D7FF21C247D5B00374E49 /* AppDelegate.m */,
+				359D7FF31C247D5B00374E49 /* Assets.xcassets */,
+				359D7FF41C247D5B00374E49 /* LaunchScreen.storyboard */,
+				359D7FF61C247D5B00374E49 /* Main.storyboard */,
+				359D7FF81C247D5B00374E49 /* Info.plist */,
+				359D7FF91C247D5B00374E49 /* main.m */,
+				359D7FFA1C247D5B00374E49 /* music.mp3 */,
+				359D7FFB1C247D5B00374E49 /* ViewController.h */,
+				359D7FFC1C247D5B00374E49 /* ViewController.m */,
+			);
+			path = OYQMusicPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		359D7FD11C245E8300374E49 /* OYQMusicPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359D7FE91C245E8300374E49 /* Build configuration list for PBXNativeTarget "OYQMusicPlayer" */;
+			buildPhases = (
+				359D7FCE1C245E8300374E49 /* Sources */,
+				359D7FCF1C245E8300374E49 /* Frameworks */,
+				359D7FD01C245E8300374E49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OYQMusicPlayer;
+			productName = "播放器";
+			productReference = 359D7FD21C245E8300374E49 /* OYQMusicPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		359D7FCA1C245E8300374E49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "欧阳铨";
+				TargetAttributes = {
+					359D7FD11C245E8300374E49 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 495Q99F5Z9;
+					};
+				};
+			};
+			buildConfigurationList = 359D7FCD1C245E8300374E49 /* Build configuration list for PBXProject "OYQMusicPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 359D7FC91C245E8300374E49;
+			productRefGroup = 359D7FD31C245E8300374E49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				359D7FD11C245E8300374E49 /* OYQMusicPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		359D7FD01C245E8300374E49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359D80031C247D5B00374E49 /* music.mp3 in Resources */,
+				359D80011C247D5B00374E49 /* Info.plist in Resources */,
+				359D80001C247D5B00374E49 /* Main.storyboard in Resources */,
+				359D7FFE1C247D5B00374E49 /* Assets.xcassets in Resources */,
+				359D7FFF1C247D5B00374E49 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		359D7FCE1C245E8300374E49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359D80041C247D5B00374E49 /* ViewController.m in Sources */,
+				359D80021C247D5B00374E49 /* main.m in Sources */,
+				359D7FFD1C247D5B00374E49 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		359D7FF41C247D5B00374E49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				359D7FF51C247D5B00374E49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		359D7FF61C247D5B00374E49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				359D7FF71C247D5B00374E49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		359D7FE71C245E8300374E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		359D7FE81C245E8300374E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		359D7FEA1C245E8300374E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/OYQMusicPlayer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oyq.cn.---";
+				PRODUCT_NAME = OYQMusicPlayer;
+			};
+			name = Debug;
+		};
+		359D7FEB1C245E8300374E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/OYQMusicPlayer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "oyq.cn.---";
+				PRODUCT_NAME = OYQMusicPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		359D7FCD1C245E8300374E49 /* Build configuration list for PBXProject "OYQMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359D7FE71C245E8300374E49 /* Debug */,
+				359D7FE81C245E8300374E49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		359D7FE91C245E8300374E49 /* Build configuration list for PBXNativeTarget "OYQMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359D7FEA1C245E8300374E49 /* Debug */,
+				359D7FEB1C245E8300374E49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 359D7FCA1C245E8300374E49 /* Project object */;
+}
