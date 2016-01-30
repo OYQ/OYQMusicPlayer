@@ -9,90 +9,63 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController ()
-/// 声音调节
-@property (weak, nonatomic) IBOutlet UISlider *sliderView;
-/// 封面后面的黑色图片
-@property (weak, nonatomic) IBOutlet UIView *backView;
+@interface ViewController ()<AVAudioPlayerDelegate>
 /// 封面图片
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 /// 播放进度
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 /// 播放进度的文字
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
-/// 上一首的按钮
-@property (weak, nonatomic) IBOutlet UIButton *lastMusic;
 /// 播放按钮
 @property (weak, nonatomic) IBOutlet UIButton *playMusic;
-/// 下一首的按钮
-@property (weak, nonatomic) IBOutlet UIButton *nextMusic;
 
-
-/// 当前是否正在播放音乐的标志
-@property (nonatomic, assign, getter=isPlay) BOOL playingMusic;
 /// 自动更新播放进度的文字的定时器
 @property (strong, nonatomic) NSTimer *timer;
 /// 音乐播放器
 @property (strong, nonatomic) AVAudioPlayer *player;
-/// 更新歌曲时间
--(void)changeTime;
-/// 改变声音大小
--(void)changeVoice;
+
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.playingMusic = NO;
+    //初始化播放器
+    [self initPlayer];
+    //更新播放进度的文字
+    [self changeTime];
+    //初始化动画
+    [self initAnimatiom];
+    //先不要让动画播放
+    [self pauseLayer:self.coverImageView.layer];
     
-    //设置声音调节的范围
-    [self.sliderView addTarget:self action:@selector(changeVoice) forControlEvents:UIControlEventValueChanged];
-    self.sliderView.minimumValue = 1;
-    self.sliderView.maximumValue = 10;
-    
-    //封面后面的黑色图片的圆角
-    self.backView.layer.cornerRadius = self.backView.bounds.size.width/2;
-    self.backView.layer.masksToBounds = YES;
-    self.backView.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.8];
-    
-    //设置封面图片为圆角
-    self.coverImageView.layer.cornerRadius = self.coverImageView.bounds.size.width/2;
-    self.coverImageView.layer.masksToBounds = YES;
-    
-    //设置初始的播放进度
-    self.progressView.progress = 0;
-    
-    // 上一首的按钮
-    [self.lastMusic setBackgroundImage:[UIImage imageNamed:@"bfzn_lastMusic"] forState:UIControlStateNormal];
-    
-    // 播放按钮
-    [self.playMusic setBackgroundImage:[UIImage imageNamed:@"bfzn_playMusic"] forState:UIControlStateNormal];
-    [self.playMusic addTarget:self action:@selector(playMusicBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    // 下一首的按钮
-    [self.nextMusic setBackgroundImage:[UIImage imageNamed:@"bfzn_nextMusic"] forState:UIControlStateNormal];
-    
-    
+}
+
+/**
+ *  初始化播放器
+ */
+- (void)initPlayer{
     // 音乐播放器
     NSBundle *bundle = [NSBundle mainBundle];
     NSString * path = [bundle pathForResource:@"music" ofType:@"mp3"];
     NSURL *musicURL = [NSURL fileURLWithPath:path];
-    NSError *error;
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:musicURL error:&error];
-    
-    //更新播放进度的文字
-    [self changeTime];
-    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:musicURL error:nil];
+    //设置初始的声音值
+    self.player.volume = 2;
+    self.player.delegate = self;
 }
 
-//更新时间
--(void)changeTime
+/**
+ *  更新播放时间的label
+ */
+- (void)changeTime
 {
     //获取音频的总时间
     NSTimeInterval totalTimer = self.player.duration;
     //获取音频的当前时间
     NSTimeInterval currentTime = self.player.currentTime;
+    
     //根据时间比设置进度条的进度
     self.progressView.progress = (currentTime/totalTimer);
     
@@ -106,34 +79,110 @@
     //把时间显示在lable上
     NSString *timeString = [NSString stringWithFormat:@"%02d:%02d/%02d:%02d",currentM, currentS, totalM, totalS];
     self.progressLabel.text = timeString;
-}
-//
 
-//改变声音
--(void)changeVoice
+}
+
+/**
+ *  暂停layer上面的动画
+ *
+ *  @param layer 需要暂停的layer
+ */
+- (void)pauseLayer:(CALayer*)layer
 {
-    self.player.volume = self.sliderView.value;
+    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    layer.speed = 0.0;
+    layer.timeOffset = pausedTime;
+}
+
+/**
+ *  继续layer上面的动画
+ *
+ *  @param layer 需要继续的layer
+ */
+- (void)resumeLayer:(CALayer*)layer
+{
+    CFTimeInterval pausedTime = [layer timeOffset];
+    layer.speed = 1.0;
+    layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    layer.beginTime = timeSincePause;
+}
+
+/**
+ *  创建动画
+ */
+- (void)initAnimatiom{
+    //创建一个绕z轴选择的动画
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    //旋转一周
+    animation.toValue = @(2*M_PI);
+    animation.repeatCount = MAXFLOAT;
+    animation.duration = 50.f;
+    [self.coverImageView.layer addAnimation:animation forKey:@"rotationAnimation"];
     
 }
 
-//播放按钮的点击方法
--(void)playMusicBtnClick
-{
-    if (self.isPlay) {
-        [self.playMusic setBackgroundImage:[UIImage imageNamed:@"bfzn_playMusic"] forState:UIControlStateNormal];
-        self.playingMusic = NO;
+#pragma mark - Action方法
+- (IBAction)sliderView:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    self.player.volume = slider.value;
+}
+- (IBAction)playbutton:(id)sender {
+    if (self.player.isPlaying) {
+        //暂停播放器
         [self.player pause];
+        //更换播放button上面的图片
+        [self.playMusic setImage:[UIImage imageNamed:@"bfzn_playMusic"] forState:UIControlStateNormal];
+        //取消定时器
         if ([self.timer isValid]) {
             [self.timer invalidate];
             self.timer = nil;
         }
+        //暂停封面图片的旋转
+        CAAnimation * anim = [self.coverImageView.layer animationForKey:@"rotationAnimation"];
+        if (anim) {
+            //暂停动画
+            [self pauseLayer:self.coverImageView.layer];
+        }
+        
     }else{
-        [self.playMusic setBackgroundImage:[UIImage imageNamed:@"bfzn_pauseMusic"] forState:UIControlStateNormal];
-        self.playingMusic = YES;
+        //开始播放器
         [self.player play];
+        //更换播放button上面的图片
+        [self.playMusic setImage:[UIImage imageNamed:@"bfzn_pauseMusic"] forState:UIControlStateNormal];
+        //开始定时器
         if (self.timer == nil) {
             self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changeTime) userInfo:nil repeats:YES];
         }
+        //继续封面图片的旋转(动画可能在播放结束的时候被移除)
+        CAAnimation * anim = [self.coverImageView.layer animationForKey:@"rotationAnimation"];
+        if (anim == nil) {
+            [self initAnimatiom];
+        }else{
+            [self resumeLayer:self.coverImageView.layer];
+        }
+        
+        
     }
 }
+
+# pragma mark - 代理方法
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    //更换播放button上面的图片
+    [self.playMusic setImage:[UIImage imageNamed:@"bfzn_playMusic"] forState:UIControlStateNormal];
+    //取消定时器
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    //停止封面图片的旋转
+    CAAnimation * anim = [self.coverImageView.layer animationForKey:@"rotationAnimation"];
+    if (anim) {
+        //暂停动画
+        [self.coverImageView.layer removeAllAnimations];
+    }
+    [self changeTime];
+}
+
 @end

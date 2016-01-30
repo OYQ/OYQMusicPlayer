@@ -11,24 +11,24 @@
 		359D7FFE1C247D5B00374E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF31C247D5B00374E49 /* Assets.xcassets */; };
 		359D7FFF1C247D5B00374E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF41C247D5B00374E49 /* LaunchScreen.storyboard */; };
 		359D80001C247D5B00374E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF61C247D5B00374E49 /* Main.storyboard */; };
-		359D80011C247D5B00374E49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FF81C247D5B00374E49 /* Info.plist */; };
 		359D80021C247D5B00374E49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D7FF91C247D5B00374E49 /* main.m */; };
 		359D80031C247D5B00374E49 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 359D7FFA1C247D5B00374E49 /* music.mp3 */; };
 		359D80041C247D5B00374E49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359D7FFC1C247D5B00374E49 /* ViewController.m */; };
+		35CEDE451C5C946100DEA388 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35CEDE441C5C946100DEA388 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		359D7FD21C245E8300374E49 /* OYQMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OYQMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		359D7FF11C247D5B00374E49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		359D7FF21C247D5B00374E49 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		359D7FF31C247D5B00374E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		359D7FF11C247D5B00374E49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = OYQMusicPlayer/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		359D7FF21C247D5B00374E49 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = OYQMusicPlayer/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		359D7FF31C247D5B00374E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		359D7FF51C247D5B00374E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		359D7FF71C247D5B00374E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		359D7FF81C247D5B00374E49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		359D7FF91C247D5B00374E49 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		359D7FFA1C247D5B00374E49 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		359D7FF91C247D5B00374E49 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
+		359D7FFA1C247D5B00374E49 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = ../music.mp3; sourceTree = "<group>"; };
 		359D7FFB1C247D5B00374E49 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		359D7FFC1C247D5B00374E49 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		35CEDE441C5C946100DEA388 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,18 +61,42 @@
 		359D7FF01C247D5B00374E49 /* OYQMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				359D7FF11C247D5B00374E49 /* AppDelegate.h */,
-				359D7FF21C247D5B00374E49 /* AppDelegate.m */,
+				359D7FFB1C247D5B00374E49 /* ViewController.h */,
+				359D7FFC1C247D5B00374E49 /* ViewController.m */,
+				35CEDE461C5C953200DEA388 /* Supporting Files */,
+				35CEDE471C5C955F00DEA388 /* Resources */,
+				35CEDE481C5C95B200DEA388 /* AppDelegate */,
+			);
+			path = OYQMusicPlayer;
+			sourceTree = "<group>";
+		};
+		35CEDE461C5C953200DEA388 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				359D7FF31C247D5B00374E49 /* Assets.xcassets */,
 				359D7FF41C247D5B00374E49 /* LaunchScreen.storyboard */,
 				359D7FF61C247D5B00374E49 /* Main.storyboard */,
-				359D7FF81C247D5B00374E49 /* Info.plist */,
 				359D7FF91C247D5B00374E49 /* main.m */,
-				359D7FFA1C247D5B00374E49 /* music.mp3 */,
-				359D7FFB1C247D5B00374E49 /* ViewController.h */,
-				359D7FFC1C247D5B00374E49 /* ViewController.m */,
 			);
-			path = OYQMusicPlayer;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35CEDE471C5C955F00DEA388 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				359D7FFA1C247D5B00374E49 /* music.mp3 */,
+				35CEDE441C5C946100DEA388 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		35CEDE481C5C95B200DEA388 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				359D7FF11C247D5B00374E49 /* AppDelegate.h */,
+				359D7FF21C247D5B00374E49 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				359D80031C247D5B00374E49 /* music.mp3 in Resources */,
-				359D80011C247D5B00374E49 /* Info.plist in Resources */,
 				359D80001C247D5B00374E49 /* Main.storyboard in Resources */,
 				359D7FFE1C247D5B00374E49 /* Assets.xcassets in Resources */,
+				35CEDE451C5C946100DEA388 /* Info.plist in Resources */,
 				359D7FFF1C247D5B00374E49 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +187,7 @@
 				359D7FF51C247D5B00374E49 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		359D7FF61C247D5B00374E49 /* Main.storyboard */ = {
@@ -171,6 +196,7 @@
 				359D7FF71C247D5B00374E49 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -297,6 +323,7 @@
 				359D7FEB1C245E8300374E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
