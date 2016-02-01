@@ -42,6 +42,7 @@
     
 }
 
+#pragma mark - 方法
 /**
  *  初始化播放器
  */
@@ -79,7 +80,6 @@
     //把时间显示在lable上
     NSString *timeString = [NSString stringWithFormat:@"%02d:%02d/%02d:%02d",currentM, currentS, totalM, totalS];
     self.progressLabel.text = timeString;
-
 }
 
 /**
@@ -129,7 +129,7 @@
     self.player.volume = slider.value;
 }
 - (IBAction)playbutton:(id)sender {
-    if (self.player.isPlaying) {
+    if (self.player.isPlaying) {//当前正在播放
         //暂停播放器
         [self.player pause];
         //更换播放button上面的图片
@@ -146,7 +146,7 @@
             [self pauseLayer:self.coverImageView.layer];
         }
         
-    }else{
+    }else{//当前没有在播放
         //开始播放器
         [self.player play];
         //更换播放button上面的图片
